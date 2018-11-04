@@ -5,12 +5,14 @@
 
 #include "bubbleSort.h"
 #include "insertionSort.h"
+#include "selectionSort.h"
+
 
 int a[];
 
 int main() {
 	int len = 0;
-	printf("enter size of array: ");
+	printf("\nenter size of array: ");
 	scanf("%d", &len);
 	int* q = malloc(len + 1);
 	*a = (int *)q;
@@ -24,8 +26,9 @@ int main() {
 	printf("\n");
 	label:
 	printf("Which sorting algorithm would you like using: \n");
-	printf("	1: Bubble Sort\n");
-	printf("	2: Insertion Sort\n");
+	printf("\t1: Bubble Sort\n");
+	printf("\t2: Insertion Sort\n");
+	printf("\t3: Selection Sort\n");
 	int opt = -1;
 	printf("Enter option(the integer corresponding to your choice): ");
 	scanf("%d", &opt);
@@ -34,6 +37,8 @@ int main() {
 		case 1: bubble(a, len);
 		break;
 		case 2: insertion(a, len);
+		break;
+		case 3: selection(a,len);
 		break;
 		case -1: printf("Choose an option by typing corresponding integer!\n");
 		goto label;
