@@ -58,8 +58,8 @@ int main(void){
 		priMat(a, m);
 	}	
 	else {
-		printf("Second Matrix:\n");
-		priMat(b, m);
+		printf("Subtraction of input matrices give:\n");
+		priMat(a, m);
 	}	
 }
 

@@ -1,5 +1,6 @@
 
 
+
 int iSwap(int x[], int w, int s, int p);
 
 int* insertion(int a[], int y) {
