@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <math.h>
  
 
 #include "bubbleSort.h"
 #include "insertionSort.h"
 #include "selectionSort.h"
+#include "mergeSort.h"
 
 
 int a[];
@@ -29,6 +31,7 @@ int main() {
 	printf("\t1: Bubble Sort\n");
 	printf("\t2: Insertion Sort\n");
 	printf("\t3: Selection Sort\n");
+	printf("\t4: Merge Sort\n");
 	int opt = -1;
 	printf("Enter option(the integer corresponding to your choice): ");
 	scanf("%d", &opt);
@@ -38,12 +41,15 @@ int main() {
 		break;
 		case 2: insertion(a, len);
 		break;
-		case 3: selection(a,len);
+		case 3: selection(a, len);
+		break;
+		case 4: merge(a, 0, len);
 		break;
 		case -1: printf("Choose an option by typing corresponding integer!\n");
 		goto label;
 		break;
 		default: printf("not that many options yet, STOP KIDDING!!");
+		goto label;
 		break;
 	}
 	printf("Here's the sorted array for you :) : \n");
